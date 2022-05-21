@@ -19,7 +19,7 @@ html, body {
     background: #a9bdce;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     padding: 0.5rem;
 }
@@ -35,7 +35,7 @@ html, body {
     height: 100%;
 }
 
-.diplay-container {
+.display-container {
     flex: 12;
     background: #b2c7d9;
     overflow-y: scroll;
@@ -45,7 +45,7 @@ html, body {
     display: flex;
     justify-content: stretch;
     align-items: stretch;
-    flex: 2;
+    flex: 1;
 }
 
 .input-container span{
@@ -111,4 +111,17 @@ html, body {
 .time {
     font-size: 10px;
     margin: 0 5px;
+}
+
+.sent {
+    flex-direction: row-reverse;
+    float: right;
+}
+
+.sent .message {
+    background: #ffeb33;
+}
+
+.received .message {
+    background: #fff;
 }

@@ -6,6 +6,8 @@ const server = http.createServer(app);
 
 const socketIO = require('socket.io');
 
+const moment = require('moment')
+
 const io = socketIO(server);
 
 
@@ -17,7 +19,14 @@ const PORT = process.env.PORT || 5000;
 
 io.on("connection",(socket)=>{
     socket.on("chatting", (message)=>{
-        io.emit("chatting",message);
+        const {name, msg} = message;
+
+
+        io.emit("chatting",{
+            name,
+            msg,
+            time : moment(new Date()).format("MM-DD h:mm A")
+        });
     })
 })
 
