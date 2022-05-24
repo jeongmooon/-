@@ -21,7 +21,6 @@ io.on("connection",(socket)=>{
     socket.on("chatting", (message)=>{
         const {name, msg} = message;
 
-
         io.emit("chatting",{
             name,
             msg,
