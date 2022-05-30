@@ -205,3 +205,7 @@ reStartButton.addEventListener("click",()=>{
     gameText.style.display = "none";
     init();
 })
+function s(){
+    const name = document.querySelector(".name");
+    console.log(name)
+}
